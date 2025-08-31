@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shouvik's Lair</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(to bottom, #00ffff, #00bcd4);
+      color: #00333a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    h1 {
+      margin: 20px auto 0;
+      width: 300px;
+      padding: 10px;
+      background: red;
+      color: #fff;
+      border-radius: 8px;
+    }
+    .cat-gallery {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+    .cat-gallery img {
+      flex-shrink: 0;
+      max-height: 200px;
+      max-width: 90vw;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,.3);
+    }
+    @media (min-width:768px) {
+      .cat-gallery { justify-content: center; max-width: 80%; margin: auto; }
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #ff4b5c;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform .2s, background .3s;
+    }
+    button:hover { background: #ff1e40; transform: scale(1.1); }
+    .sus:hover { animation: shake .3s infinite; }
+    @keyframes shake {
+      0%{transform:translate(1px,1px) rotate(0);}
+      25%{transform:translate(-1px,2px) rotate(-1deg);}
+      50%{transform:translate(-3px,1px) rotate(1deg);}
+      75%{transform:translate(3px,1px) rotate(0);}
+      100%{transform:translate(1px,-1px) rotate(1deg);}
+    }
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background: rgba(0,0,0,.05);
+      font-size: 14px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Personal Vlog</h1>
+  </header>
+
+  <main>
+    <p>Hie! I am Shouvik, welcome to my first site. I don't know what to do with it right now but I'll share some stuff soon :P</p>
+    <p>For now this place be occupied by cats!</p>
+
+    <section class="cat-gallery">
+      <img src="images/cat1.jpg" alt="cat1">
+      <img src="images/cat2.jpg" alt="cat2">
+      <img src="images/cat3.jpg" alt="cat3">
+      <img src="images/cat4.jpg" alt="cat4">
+    </section>
+
+    <p>Hey let’s talk! Here’s my 
+      <a href="https://www.instagram.com/shouvik_2007/" target="_blank" rel="noopener noreferrer">insta</a>
+    </p>
+
+    <div class="sus">
+      <button onclick="window.location.href='https://youtu.be/dQw4w9WgXcQ'">
+        Watch surprise video
+      </button>
+      Click here to get free vbucks.
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 cats &amp; me >.<</p>
+  </footer>
+</body>
+</html>
