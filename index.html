@@ -5,85 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shouvik's Lair</title>
   <style>
-    /* Reset + Base */
-    html, body {
-      height: 100%;
+    body {
       margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
       text-align: center;
       background: linear-gradient(to bottom, #00ffff, #00bcd4);
       color: #00333a;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
-
-    /* Heading */
     h1 {
       margin: 20px auto 0;
       width: 300px;
       padding: 10px;
-      text-align: center;
-      background-color: red;
+      background: red;
       color: #fff;
       border-radius: 8px;
     }
-
-    /* Gallery */
     .cat-gallery {
       display: flex;
-      overflow-x: auto;
-      justify-content: center;
       gap: 20px;
       padding: 20px;
+      overflow-x: auto;
       scroll-behavior: smooth;
     }
-
     .cat-gallery img {
       flex-shrink: 0;
-      height: 200px;
+      max-height: 200px;
+      max-width: 90vw;
       border-radius: 15px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 10px rgba(0,0,0,.3);
     }
-
-    /* Buttons */
+    @media (min-width:768px) {
+      .cat-gallery { justify-content: center; max-width: 80%; margin: auto; }
+    }
     button {
       padding: 10px 20px;
       border: none;
       border-radius: 8px;
-      background-color: #ff4b5c;
+      background: #ff4b5c;
       color: white;
       font-size: 16px;
       cursor: pointer;
-      transition: transform 0.2s, background 0.3s;
+      transition: transform .2s, background .3s;
     }
-    button:hover {
-      background-color: #ff1e40;
-      transform: scale(1.1);
-    }
-
-    /* Funny shake effect */
-    .sus:hover {
-      animation: shake 0.3s infinite;
-    }
+    button:hover { background: #ff1e40; transform: scale(1.1); }
+    .sus:hover { animation: shake .3s infinite; }
     @keyframes shake {
-      0% { transform: translate(1px, 1px) rotate(0deg); }
-      25% { transform: translate(-1px, 2px) rotate(-1deg); }
-      50% { transform: translate(-3px, 1px) rotate(1deg); }
-      75% { transform: translate(3px, 1px) rotate(0deg); }
-      100% { transform: translate(1px, -1px) rotate(1deg); }
+      0%{transform:translate(1px,1px) rotate(0);}
+      25%{transform:translate(-1px,2px) rotate(-1deg);}
+      50%{transform:translate(-3px,1px) rotate(1deg);}
+      75%{transform:translate(3px,1px) rotate(0);}
+      100%{transform:translate(1px,-1px) rotate(1deg);}
     }
-
-    /* Footer */
     footer {
       margin-top: 40px;
       padding: 15px;
-      background: rgba(0,0,0,0.05);
+      background: rgba(0,0,0,.05);
       font-size: 14px;
       color: #444;
     }
-p{ color:black;}
   </style>
 </head>
 <body>
@@ -93,8 +76,8 @@ p{ color:black;}
 
   <main>
     <p>Hie! I am Shouvik, welcome to my first site. I don't know what to do with it right now but I'll share some stuff soon :P</p>
-
     <p>For now this place be occupied by cats!</p>
+
     <section class="cat-gallery">
       <img src="images/cat1.jpg" alt="cat1">
       <img src="images/cat2.jpg" alt="cat2">
@@ -102,14 +85,16 @@ p{ color:black;}
       <img src="images/cat4.jpg" alt="cat4">
     </section>
 
-    <p>Hey let’s talk! Here’s my <a href="https://www.instagram.com/shouvik_2007/" target="_blank">insta</a></p>
-
-    <p class="sus">
-      <button onclick="window.location.href='https://youtu.be/dQw4w9WgXcQ'">
-        Button
-      </button> 
-      Click here to get free vbucks.
+    <p>Hey let’s talk! Here’s my 
+      <a href="https://www.instagram.com/shouvik_2007/" target="_blank" rel="noopener noreferrer">insta</a>
     </p>
+
+    <div class="sus">
+      <button onclick="window.location.href='https://youtu.be/dQw4w9WgXcQ'">
+        Watch surprise video
+      </button>
+      Click here to get free vbucks.
+    </div>
   </main>
 
   <footer>
